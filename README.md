@@ -89,3 +89,12 @@ Thanks to [Argon 40](https://www.argon40.com "https://www.argon40.com") for buil
 ### Alternatives
 
 A fan control daemon written in Rust for Argon One v2 case: [JhnW/ArgonOne-Native-Fan-Controller](https://github.com/JhnW/ArgonOne-Native-Fan-Controller "JhnW/ArgonOne-Native-Fan-Controller")
+
+### Troubleshooting
+In case the i2c will not work correctly:
+
+So I did the following steps to enable i2c support:
+
+edit file ‘/boot/config-user.txt’ and add the line ‘dtparam=i2c_arm=on’
+edit file ‘/etc/modules’ and add the line ‘i2c-dev’
+After a reboot you can check i2c functionality by issuing the command ‘sudo i2cdetect -y 1’
