@@ -96,5 +96,6 @@ In case the i2c will not work correctly:
 So I did the following steps to enable i2c support:
 
 edit file ‘/boot/config-user.txt’ and add the line ‘dtparam=i2c_arm=on’
+
 edit file ‘/etc/modules’ and add the line ‘i2c-dev’
 After a reboot you can check i2c functionality by issuing the command ‘sudo i2cdetect -y 1’
